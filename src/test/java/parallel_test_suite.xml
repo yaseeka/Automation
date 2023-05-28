@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="parallel_execution" parallel="tests">
+    <test name="chrometest">
+        <parameter name="myBrowser" value="chrome">
+            <classes>
+                <class name="Login.ValidLogin"></class>
+
+
+            </classes>
+        </parameter>
+    </test>
+    <test name="edgetest">
+        <parameter name="myBrowser" value="edge">
+           <classes>
+               <class name="Login.InvalidLogin"></class>
+           </classes>
+        </parameter>
+    </test>
+</suite>
